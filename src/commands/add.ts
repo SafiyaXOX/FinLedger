@@ -23,6 +23,17 @@ export function handleAdd (args: string[]){
         ? args [dateIndex + 1]
         : new Date().toISOString().split("T")[0];
 
+    // Ensures that 'amount' is a valid positive number
+    if (isNaN(amount) || amount <= 0){
+        console.log ("Amount must be a positive number.");
+        return;
+    }
+
+    // Ensures that the transaction type is valid
+    if (type !== "income" && type !== "expense"){
+        console.log("Type must be either 'income' or 'expense'.");
+        return;
+    }
 
     // Loads the existing ledger
     const ledger = loadLedger();
@@ -47,7 +58,8 @@ export function handleAdd (args: string[]){
     ledger.transactions.push(newTransaction);
     saveLedger (ledger);
 
-    console.log ("Transaction added successfully");
+    console.log(`Transaction ${newID} added successfully.`);
+
 }
 
 

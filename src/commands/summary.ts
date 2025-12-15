@@ -25,9 +25,10 @@ export function handleSummary (args: string []){
     const balance = totalIncome - totalExpenses
 
     // Prints the financial summary in a readable format
-    console.log (`Total Income: $${totalIncome}`);
-    console.log (`Total Expenses: $${totalExpenses}`);
+    const format = (value: number)=> value.toLocaleString();
+    console.log (`Total Income: $${format(totalIncome)}`);
+    console.log (`Total Expenses: $${format(totalExpenses)}`);
 
     console.log("-------------------------------");
-    console.log (`Balance: $${balance}`);
+    console.log (`Balance: $${format(balance)}`);
 }

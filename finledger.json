@@ -15,6 +15,14 @@
       "category": "rent",
       "amount": 600,
       "description": "December Rent"
+    },
+    {
+      "id": 4,
+      "date": "2025-12-15",
+      "type": "expense",
+      "category": "transportation",
+      "amount": 500,
+      "description": "bus"
     }
   ]
 }

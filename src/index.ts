@@ -27,6 +27,24 @@ switch (command){
         handleSummary(args);
         break;
 
+    case "help":
+        console.log(`
+FinLedger CLI Usage:
+        
+add --amount <number> --type <income|expense> --category <string> --descriptiion <string> [--date YYYY-MM-DD]
+    • amount must be a positive number
+    • type must be either income or expense
+
+list [--type <income|expense>] [--category <string>] [--month YYYY-MM]
+
+update <id> [--amount <number>] [--description <string>]
+        
+delete <id>
+
+summary
+        `);
+        break;
+
     default:
-        console.log("Unknown command");
+        console.log("Unknown command. Run `summary help` to see available commands.");
 }

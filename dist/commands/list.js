@@ -35,4 +35,11 @@ function handleList(args) {
     for (const t of transactions) {
         console.log(`${t.id} | ${t.date} | ${t.type} | ${t.category} | ${t.amount} | ${t.description} |`);
     }
+    // Month filter: --month YYYY-MM
+    const monthIndex = args.indexOf("--month");
+    if (monthIndex !== -1) {
+        const month = args[monthIndex + 1];
+        // Keeps transactions that start with the given year-month
+        transactions = transactions.filter(t => t.date.startsWith(month));
+    }
 }
