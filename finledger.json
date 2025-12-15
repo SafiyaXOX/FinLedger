@@ -23,6 +23,14 @@
       "category": "salary",
       "amount": 50000,
       "description": "November salary"
+    },
+    {
+      "id": 6,
+      "date": "2025-12-15",
+      "type": "expense",
+      "category": "salary",
+      "amount": 4000,
+      "description": "poverty"
     }
   ]
 }
