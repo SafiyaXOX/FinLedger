@@ -1,19 +1,11 @@
 {
   "transactions": [
     {
-      "id": 2,
-      "date": "2025-12-12",
-      "type": "income",
-      "category": "salary",
-      "amount": 7000,
-      "description": "December Salary"
-    },
-    {
       "id": 3,
       "date": "2025-12-12",
       "type": "expense",
       "category": "rent",
-      "amount": 600,
+      "amount": 6000,
       "description": "December Rent"
     },
     {
@@ -23,6 +15,14 @@
       "category": "transportation",
       "amount": 500,
       "description": "bus"
+    },
+    {
+      "id": 5,
+      "date": "2025-12-15",
+      "type": "income",
+      "category": "salary",
+      "amount": 50000,
+      "description": "November salary"
     }
   ]
 }
